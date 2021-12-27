@@ -1,0 +1,145 @@
+
+* { box-sizing: border-box; padding:0; margin: 0; }
+
+body {
+	font-family: 'Open Sans', sans-serif;
+ 	background:url(../images/bg.jpg) no-repeat center fixed;
+    -webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+ 	background-size: cover;
+ 	background-size: 100% 100%;
+}
+.main{
+	margin:13em auto 0;
+	width: 22%;
+}
+form {
+	background:#0A192A;
+	border-radius:0.4em;
+  	border:1px solid #0A192A;
+  	overflow:hidden;
+  	position:relative;
+  	box-shadow: 0 5px 10px 5px rgba(0,0,0,0.2);
+}
+
+form:after {
+  content:"";
+  display:block;
+  position:absolute;
+  height:1px;
+  width:100px;
+  left:20%;
+  top:0;
+}
+
+form:before {
+ 	content:"";
+  display:block;
+  position:absolute;
+  width:8px;
+  height:5px;
+  border-radius:50%;
+  left:34%;
+  top:-7px;
+  box-shadow: 0 0 6px 4px #fff;
+}
+
+.inset {
+ padding:20px; 
+  border-top:1px solid #000;
+}
+
+form h1{
+  text-align:center;
+  padding:18px 0;
+  border-bottom:1px solid #000;
+  position:relative;
+}
+form h1:after {
+ content:"";
+  display:block;
+  width:250px;
+  height:100px;
+  position:absolute;
+  top:0;
+  left:50px;
+  pointer-events:none;
+ background: linear-gradient(50deg, rgba(255,255,255,0.15), rgba(0,0,0,0));
+  
+}
+
+form h1  {
+	color:#fff;
+	text-shadow:0 1px 0 #000;
+	font-size:18px;
+	font-weight: 600;
+	text-align:center;
+  padding:18px 0;
+  border-bottom:1px solid #000;
+  position:relative;
+	
+}
+form h1 span{
+	padding:5px;
+	background:#0184ff;
+}
+label {
+ 	color:rgba(137, 192, 243, 0.8);
+  	display:block;
+  	font-size:13px;
+  	padding-bottom:9px;
+}
+
+
+label[for=remember]{
+ 	color:#fff;
+  	display:inline-block;
+  	font-size: 13px;
+}
+
+input[type=checkbox] {
+ 	display:inline-block;
+  	vertical-align:middle;
+}
+
+.p-container {
+ 	padding:0 20px 20px 20px; 
+}
+
+.p-container:after {
+ 	clear:both;
+  display:table;
+  content:"";
+}
+
+.p-container span a {
+  font-size:14px;
+  display:block;
+  float:left;
+  color:#0d93ff;
+  padding-top: 4px;
+}
+
+/**start-copy-right**/
+.copy-right {
+	text-align: center;
+}
+.copy-right p {
+	color: #FFF;
+	font-size:1em;
+	padding:6em 0;
+}
+.copy-right p a {
+	font-size:1em;
+	font-weight:600;
+	color:#061A3D;
+	-webkit-transition: all 0.3s ease-out;
+	-moz-transition: all 0.3s ease-out;
+	-ms-transition: all 0.3s ease-out;
+	-o-transition: all 0.3s ease-out;
+	transition: all 0.3s ease-out;
+}
+.copy-right a:hover{
+	color:#fff;
+}

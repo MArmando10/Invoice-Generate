@@ -152,6 +152,8 @@
     transition-duration: 0.4s;
     }
 </style>
+
+
     <!--comenzamos contenedor de factura-->
         <div class="row conteiner" >
             <div class=" jTpVbZ " >

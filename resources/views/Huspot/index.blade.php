@@ -24,7 +24,7 @@
             
                         <ol class="breadcrumb " >
                         <a class="nav-link" href="{{route('login')}}">Iniciar sesión</a>
-                            <a class="nav-link" href="#">Atención al cliente</a>
+                            <a class="nav-link" href="#"> Atención al cliente </a>
                         </ol>
                   
                         <div class="dropdown">
@@ -36,7 +36,6 @@
                                 <button class="dropdown-item" type="button">Another action</button>
                                 <button class="dropdown-item" type="button">Something else here</button>
                             </div>
-                            
                         </div>
                    
         </nav>

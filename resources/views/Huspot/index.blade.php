@@ -12,29 +12,39 @@
     
     <title>HubSpot Invoice Generator</title>
 </head>
+
+
 <body>
     <!--Empieza navegacion-->
-    <div class="row" style="-webkit-box-shadow: 0.2px 0.2px 15px; padding-top: 10px">
-        <nav class="nav" style="padding-left: 30%">
-            <a class="nav-link active" aria-current="page" href="#">Active</a>
+    <div class="row " style="-webkit-box-shadow: 0.2px 0.2px 15px; padding-top: 10px">
+        <nav class="nav justify-content-between" style="padding-left: 30%">
+        
+            <a class="nav-link active dropdown-toggle " aria-current="page" href="#">Idioma</a>
             <a class="nav-link" href="#">Comuniquese con Ventas</a>
-            <a class="nav-link" href="#">Iniciar sesión</a>
-            <a class="nav-link" href="#">Atención al cliente</a>
-            <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
-                <button type="button" class="btn btn-secondary"></button>
-                    <div class="btn-group" role="group">
-                        <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Acerca de 
-                        </button>
-                            <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-                                <a class="dropdown-item" href="#">Sobre Nosotros</a>
-                                <a class="dropdown-item" href="#">Carreras</a>
+            
+                        <ol class="breadcrumb " >
+                        <a class="nav-link" href="{{route('login')}}">Iniciar sesión</a>
+                            <a class="nav-link" href="#">Atención al cliente</a>
+                        </ol>
+                  
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Acerca de 
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                                <button class="dropdown-item " type="button">Idioma</button>
+                                <button class="dropdown-item" type="button">Another action</button>
+                                <button class="dropdown-item" type="button">Something else here</button>
                             </div>
-                    </div>
-            </div>
+                        </div>
+                   
         </nav>
+
         <p></p>
+    
     </div>
+
+   
    
      <!-- crear contenido para usuario -->
     <div class="row" style="-webkit-box-shadow: 0.2px 0.2px 15px; padding-top: 10px">
@@ -142,12 +152,13 @@
     transition-duration: 0.4s;
     }
 </style>
+    <!--comenzamos contenedor de factura-->
         <div class="row conteiner " >
             <div class=" jTpVbZ " >
                 <img src="//cdn2.hubspot.net/hubfs/53/invoice%20generator/toolset.svg" class="rounded-circle" style="background-color: darkorange; height: 65px; border-radius: 20px; padding: 10px;">
             </div>
 
-            <div class="col-sm-6" style="padding: 25px" >
+            <div class=" col-md-6 col-6" style="padding: 25px" >
                     <div class="card" style="-webkit-box-shadow: 0.2px 0.2px 15px; padding: 10px ">
                         <div class="card-body" >
                    
@@ -164,69 +175,69 @@
                                                         Arrastre y suelte un archivo de logotipo o haga clic para cargar
                                                     </font>
                                                 </span>
-                                                <input type="file" name="archivo" required>
+                                                <input type="file" name="archivo" style="whith:15px" required>
                                             </div>
                                         </form>
 
                                     <div class="form-row bsMKUp">
-                                        <div class="form-group col-md-4 dGXtwg">
+                                        <div class="form-group col-md-8 dGXtwg">
                                             <input type="text" id="txtCompania" class="form-control jOUQgp" value="{{old('Compania')}}" name="Tu compañia" placeholder="Tu compañía*"  required   onKeyPress="return soloLetras(event)" >
                                             <p class="inputError">{{ $errors->first('Compania') }}</p>
                                       
                                         </div>
                                        
-                                        <div class="form-group col-md-6 bsMKUp">
+                                        <div class="form-group col-md-8 bsMKUp">
                                             <input type="text" id="txtnombre" class="form-control jOUQgp" value="{{old('nombre')}}" name="Tu nombre/s" placeholder="Tu nombre y apellido"  required   onKeyPress="return soloLetras(event)" onkeyup="soloLetras(this);">
                                             <p class="inputError">{{ $errors->first('nombreApellido') }}</p>
                                         </div>
                                         
-                                        <div class="col-md-6 bsMKUp">
+                                        <div class="col-md-8 bsMKUp">
                                             <input type="text" id="txtpagEmpresa" class="form-control jOUQgp" value="{{old('pagEmpresa')}}" name="Pagina Web de la empresa" placeholder="Pagina web de la compañia"  required   onKeyPress="return soloLetras(event)">
                                             <p class="inputError">{{ $errors->first('pagEmpresa') }}</p>
                                         </div>
 
-                                        <div class="col-md-6 bsMKUp">
+                                        <div class="col-md-8 bsMKUp">
                                             <input type="text" id="txtDireccionEmpresa" class="form-control jOUQgp" value="{{old('DireccionEmpresa')}}" name="Dirección de la empresa" placeholder="Dirección de la empresa"     onKeyPress="return soloLetras(event)" >
                                             <p class="inputError">{{ $errors->first('DireccionEmpresa') }}</p>
                                         </div>
 
-                                        <div class="col-md-6 bsMKUp">
+                                        <div class="col-md-8 bsMKUp">
                                             <input type="text" id="txtCodigoPostal" class="form-control jOUQgp" value="{{old('CodigoPostal')}}" name="CodigoPostal" placeholder="Codigo Postal"     onKeyPress="return soloLetras(event)" onkeyup="soloNumeros(this);">
                                             <p class="inputError">{{ $errors->first('CodigoPostal') }}</p>
                                         </div>
 
-                                        <div class="col-md-6 bsMKUp">
+                                        <div class="col-md-8 bsMKUp">
                                             <input type="text" id="txtPaís" class="form-control jOUQgp" value="{{old('País')}}" name="País" placeholder="País"     onKeyPress="return soloLetras(event)" onkeyup="soloLetras(this);">
                                             <p class="inputError">{{ $errors->first('País') }}</p>
                                         </div>
 
-                                        <div class="col-md-6 bsMKUp">
+                                        <div class="col-md-8 bsMKUp">
                                             <input type="text" id="txtNoTelefono" class="form-control jOUQgp" value="{{old('NoTelefono')}}" name="NoTelefono" placeholder="Telefono No."  required   onKeyPress="return soloLetras(event)" onkeyup="soloNumeros(this);">
                                             <p class="inputError">{{ $errors->first('NoTelefono') }}</p>
                                         </div>
 
-                                        <div class="col-md-6 bsMKUp">
+                                        <div class="col-md-8 bsMKUp">
                                             <input type="text" id="txtEmail" class="form-control jOUQgp" value="{{old('Email')}}" name=Email" placeholder="Dirección de correo electronico"  required   onKeyPress="return soloLetras(event)" >
                                             <p class="inputError">{{ $errors->first('Email') }}</p>
                                         </div>
 
 
-                                        <div class="form-group col-md-4 dGXtwg">
+                                        <div class="form-group col-md-8 dGXtwg">
                                             <input type="text" id="txtCompania" class="form-control jOUQgp" value="{{old('Compania')}}" name="Tu compañia" placeholder="Empresa del cliente"  required   onKeyPress="return soloLetras(event)" onkeyup="soloLetras(this);">
                                             <p class="inputError">{{ $errors->first('Compania') }}</p>
                                         </div>
 
-                                        <div class="form-group col-md-4 ">
+                                        <div class="form-group col-md-8 ">
                                             <input type="text" id="txtCompania" class="form-control jOUQgp" value="{{old('Compania')}}" name="Tu compañia" placeholder="Nombre del cliente*"  required   onKeyPress="return soloLetras(event)" onkeyup="soloLetras(this);">
                                             <p class="inputError">{{ $errors->first('Compania') }}</p>
                                         </div>
 
-                                        <div class="form-group col-md-4 ">
+                                        <div class="form-group col-md-8 ">
                                             <input type="text" id="txtDireccionCliente" class="form-control jOUQgp" value="{{old('DireccionCliente')}}" name="DireccionCliente" placeholder="Dirección del cliente*"     onKeyPress="return soloLetras(event)" >
                                             <p class="inputError">{{ $errors->first('DireccionCliente') }}</p>
                                         </div>
 
-                                        <div class="form-group col-md-4 ">
+                                        <div class="form-group col-md-8 ">
                                             <input type="text" id="txtNombreCliente" class="form-control jOUQgp" value="{{old('NombreCliente')}}" name="NombreCliente" placeholder="Nombre del cliente"  onKeyPress="return soloLetras(event)" onkeyup="soloLetras(this);">
                                             <p class="inputError">{{ $errors->first('NombreCliente') }}</p>
                                         </div>
@@ -236,7 +247,7 @@
                                             <p class="inputError">{{ $errors->first('CodigoPostalCliente') }}</p>
                                         </div>
 
-                                        <div class="col-md-6 bsMKUp">
+                                        <div class="col-md-8 bsMKUp">
                                             <input type="text" id="txtPaísCliente" class="form-control jOUQgp" value="{{old('PaísCliente')}}" name="PaísCliente" placeholder="País"  onKeyPress="return soloLetras(event)" onkeyup="soloLetras(this);">
                                             <p class="inputError">{{ $errors->first('PaísCliente') }}</p>
                                         </div>
@@ -353,16 +364,16 @@
    
        <br><br>
         	
-        <div class=”row”> 
+        <div class="row col-md-12"> 
            
-            <div class="col">
+            <div class="col-md-12">
                 <h4 class="h4 hsg-promo-bar" data-background="dark" style="text-align: center; padding: 1.25rem 0">
                     <span>
                         <font style="align-items:center; justify-content:center;">Cómo utilizar el generador de plantillas de facturas gratuito</font>
                     </span>
                 </h4>
             </div>
-                 <p class="parr">
+                 <p class="parr col-md-12">
                     <font style"vertical-align: inherit; >
                     Utilice este generador de facturas gratuito para crear y descargar facturas profesionales para enviar a sus clientes. 
                     Comience por completar los detalles de su empresa en la plantilla de factura a continuación para completar el estado de cuenta. 
@@ -373,7 +384,7 @@
                     </font>
                 </p>
 
-                <p class="parr">
+                <p class="parr col-md-12">
                     <span>
                         <font>
                         Una vez que haya descargado la factura, envíela a sus clientes por correo electrónico o imprímala y envíela directamente.

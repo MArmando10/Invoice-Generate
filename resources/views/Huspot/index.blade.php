@@ -36,6 +36,7 @@
                                 <button class="dropdown-item" type="button">Another action</button>
                                 <button class="dropdown-item" type="button">Something else here</button>
                             </div>
+                            
                         </div>
                    
         </nav>
@@ -153,7 +154,7 @@
     }
 </style>
     <!--comenzamos contenedor de factura-->
-        <div class="row conteiner " >
+        <div class="row conteiner" >
             <div class=" jTpVbZ " >
                 <img src="//cdn2.hubspot.net/hubfs/53/invoice%20generator/toolset.svg" class="rounded-circle" style="background-color: darkorange; height: 65px; border-radius: 20px; padding: 10px;">
             </div>
